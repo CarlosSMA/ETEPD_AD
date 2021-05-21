@@ -1,4 +1,4 @@
-# Desafio I -- AD
+# AD
 Data de criação: 21/05/21
 Integrantes: 
 - Carlos Alvarez
@@ -9,4 +9,4 @@ Integrantes:
 - Jorge Freitas
 
 ## Objetivo
-Transpor X em Y
+Repositório geral para a matéria "Administração de Dados"
