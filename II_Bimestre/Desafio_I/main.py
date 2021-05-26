@@ -4,7 +4,6 @@ Data: 21/05/21
 Tema: Problemas dentários
 '''
 from random import randint
-
 i = 0
 j = 0
 # Carlos
