@@ -15,11 +15,18 @@ cidades = list(dados.valores)
 # len -> Tamanho (nº. de índices)
 # Neste caso, o nº. de índices representa a quantidade de cidades avaliadas
 print(len(cidades))
+sleep(2)
 
 # Acessar um índice específico
 # Neste caso, é limitar a exposição de dados a uma cidade
 print("-=-=-=-=- Lista cidades -=-=-=-=-")
 for i in cidades:
     print(f"- {i[0]}")
-    sleep(0.005)
+
+sleep(2)
+
+# Acessar um range numa lista
+# Neste exemplo, há o acesso das 4 primeiras cidades
+print(cidades[:4])
+sleep(2)
 
