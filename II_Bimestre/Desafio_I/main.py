@@ -5,6 +5,7 @@ Tema: Problemas dentários no Brasil - Case de estudo em Alagoas
 '''
 from pandas.core.accessor import CachedAccessor
 import dados
+from time import sleep
 
 #! Criação de uma lista
 cidades = list(dados.valores)
@@ -19,4 +20,6 @@ print(len(cidades))
 # Neste caso, é limitar a exposição de dados a uma cidade
 print("-=-=-=-=- Lista cidades -=-=-=-=-")
 for i in cidades:
-    print(i[0], flush=True)
+    print(f"- {i[0]}")
+    sleep(0.005)
+
