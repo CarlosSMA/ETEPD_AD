@@ -42,6 +42,7 @@ sleep(2)
 novas_cidades = [["Cidade Teste", 0.7]]
 cidades.extend(novas_cidades)
 print(cidades[-1])
+sleep(2)
 
 print('\n5 - Mostrando os gráficos')
 sleep(2)
