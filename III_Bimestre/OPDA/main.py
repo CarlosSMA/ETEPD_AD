@@ -7,15 +7,20 @@ Devs: Carlos Alvarez & Jorge Freitas
 Turma: 3ºA
 '''
 
+'''
+TODO
+- Execução de scripts
+- Troubleshooting geral
+'''
+
 import psycopg2
 
 # Leitura do arquivo .sql exportado a partir da plataforma https://dbdiagram.io
-db_bom_dente_temp = open("db/db_bom_dente.sql")
-db_bom_dente = db_bom_dente_temp.read()
 
-comandos = db_bom_dente.split(';')
-print(comandos)
+#! Ligação com banco de dados
+conexao = psycopg2.connect(user="postgres", password="1234", host="0.0.0.0", port=5432)
+cursor = conexao.cursor()
 
-# Loop para executar os comandos do script (criação de tabelas, ligação, etc)
-# for execucao in comandos:
-    # c.execute(comandos)
+# Execução do script
+# Fonte: https://stackoverflow.com/questions/17261061/execute-sql-schema-in-psycopg2-in-python
+cursor.execute(open("db/db_bom_dente.sql", "r").read())
