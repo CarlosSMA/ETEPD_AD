@@ -41,7 +41,7 @@ CREATE TABLE "dentista" (
 );
 
 CREATE TABLE "odontograma" (
-  "operacao" varchar PRIMARY KEY,
+  "operacao" int PRIMARY KEY,
   "codigo" int,
   "plano" int,
   "data" date,
