@@ -1,52 +1,57 @@
 CREATE TABLE "paciente" (
-  "codigo" SERIAL PRIMARY KEY,
-  "nome" varchar,
-  "email" varchar,
-  "celular" varchar,
-  "data_nascimento" date,
-  "cpf" varchar,
-  "rg" varchar,
-  "logadouro" varchar,
-  "complemento" varchar
+	"codigo" bigint NOT NULL DEFAULT '0',
+	"nome" varchar,
+	"email" varchar,
+	"celular" varchar,
+	"data_nascimento" date,
+	"cpf" varchar,
+	"rg" varchar,
+	"logadouro" varchar,
+	"complemento" varchar,
+	PRIMARY KEY ("codigo")
 );
 
 CREATE TABLE "agenda" (
-  "codigo" int PRIMARY KEY,
-  "nome_dentista" varchar,
-  "nome_paciente" varchar,
-  "plano" varchar,
-  "concluido" bit,
-  "cancelado" bit,
-  "reagendado" bit
+	"codigo" bigint NOT NULL DEFAULT '0',
+	"nome_dentista" varchar,
+	"nome_paciente" varchar,
+	"plano" varchar,
+	"concluido" bit,
+	"cancelado" bit,
+	"reagendado" bit,
+	PRIMARY KEY ("codigo")
 );
 
 CREATE TABLE "login" (
-  "codigo" int PRIMARY KEY,
-  "usuario" varchar,
-  "senha" varchar,
-  "tipo_usuario" bit
+	"codigo" bigint NOT NULL DEFAULT '0',
+	"usuario" varchar,
+	"senha" varchar,
+	"tipo_usuario" bit,
+	PRIMARY KEY ("codigo")
 );
 
 CREATE TABLE "dentista" (
-  "codigo" int PRIMARY KEY,
-  "cro" varchar,
-  "nome" varchar,
-  "email" varchar,
-  "celular" varchar,
-  "data_nascimento" date,
-  "cpf" varchar,
-  "rg" varchar,
-  "logadouro" varchar,
-  "complemento" varchar
+	"codigo" bigint NOT NULL DEFAULT '0',
+	"cro" varchar,
+	"nome" varchar,
+	"email" varchar,
+	"celular" varchar,
+	"data_nascimento" date,
+	"cpf" varchar,
+	"rg" varchar,
+	"logadouro" varchar,
+	"complemento" varchar,
+	PRIMARY KEY ("codigo")
 );
 
 CREATE TABLE "odontograma" (
-  "operacao" int PRIMARY KEY,
-  "codigo" int,
-  "plano" int,
-  "data" date,
-  "descricao" varchar,
-  "observacao" varchar
+	"operacao" bigint NOT NULL DEFAULT '0',
+	"codigo" int,
+	"plano" int,
+	"data" date,
+	"descricao" varchar,
+	"observacao" varchar,
+	PRIMARY KEY ("operacao")
 );
 
 ALTER TABLE "agenda" ADD FOREIGN KEY ("codigo") REFERENCES "login" ("codigo");

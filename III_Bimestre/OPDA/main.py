@@ -38,6 +38,9 @@ while True:
     except psycopg2.errors.SyntaxError:
         print(f"Comando \"{comando}\" inválido.")
         pass
+    except psycopg2.errors.InFailedSqlTransaction:
+        print("Comando SQL com erro.")
+        pass
 
     # Salvar as alterações
     conexao.commit()
