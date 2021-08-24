@@ -7,11 +7,6 @@ Devs: Carlos Alvarez & Jorge Freitas
 Turma: 3ºA
 '''
 
-'''
-TODO
-- Troubleshooting geral
-'''
-
 import psycopg2
 
 #! Ligação com banco de dados
@@ -21,9 +16,12 @@ cursor = conexao.cursor()
 # Execução do script
 # Fonte: https://stackoverflow.com/questions/17261061/execute-sql-schema-in-psycopg2-in-python
 # Leitura do arquivo .sql exportado a partir da plataforma https://dbdiagram.io
-
-cursor.execute(open("db/db_bom_dente.sql").read())
-conexao.commit()
+try:
+    cursor.execute(open("db/db_bom_dente.sql").read())
+    conexao.commit()
+    pass
+except:
+    pass
 
 # Prompt de comandos do usuário
 while True:
