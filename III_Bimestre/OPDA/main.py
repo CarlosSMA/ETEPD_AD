@@ -22,12 +22,18 @@ cursor = conexao.cursor()
 # Fonte: https://stackoverflow.com/questions/17261061/execute-sql-schema-in-psycopg2-in-python
 # Leitura do arquivo .sql exportado a partir da plataforma https://dbdiagram.io
 
-#cursor.execute(open("db/db_bom_dente.sql").read())
+cursor.execute(open("db/db_bom_dente.sql").read())
 conexao.commit()
 
-
+# Prompt de comandos do usuário
 while True:
+
+    # Inserir os comandos & sair caso desejado
     comando = input("Insira um comando\n> ")
+    if comando == "quit" or comando == "exit":
+        break
+
+    # Checar por erros de sintaxe
     try:
         cursor.execute(comando)
         pass
@@ -35,9 +41,9 @@ while True:
         print(f"Comando \"{comando}\" inválido.")
         pass
 
+    # Salvar as alterações
     conexao.commit()
-    if comando == "quit":
-        break
 
+# Fechar a conexão antes de sair
 cursor.close()
 conexao.close()
