@@ -21,6 +21,7 @@
 	- `git clone https://github.com/CarlosSMA/ETEPD_AD`
 6. Crie um ambiente virtual python
 	- `python -m pip install --upgrade pip`
+	- `pip -m venv venv`
 	- `python main.py`
 7. Acesse o container em outro terminal/cmd
 	- `docker run -it bash database`
