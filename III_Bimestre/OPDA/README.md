@@ -19,9 +19,9 @@
 5. Clone este repositório em sua máquina local
 	- `git clone https://github.com/CarlosSMA/ETEPD_AD`
 6. Crie um ambiente virtual python
-	- `python -m pip install --upgrade pip`
-	- `python -m venv venv`
-	- `python main.py`
+	- `python3 -m pip install --upgrade pip`
+	- `python3 -m venv venv`
+	- `python3 main.py`
 7. Acesse o container em outro terminal/cmd
 	- `docker run -it bash database`
 8. Insira os seguintes comandos
