@@ -16,7 +16,6 @@
 	- `docker run -e POSTGRES_PASSWORD=1234 -d --name=database -p 5432:5432 postgres`
 4. Execute o container
 	- `docker start database`
-	- `docker run -it bash database` (em outro terminal/cmd)
 5. Clone este repositório em sua máquina local
 	- `git clone https://github.com/CarlosSMA/ETEPD_AD`
 6. Crie um ambiente virtual python
