@@ -9,8 +9,8 @@
 	- Banco de dados SQL (Postgres)
 
 ### Como executar
-1. ![[Instale o docker em sua máquina]](https://docs.docker.com/engine/install/)
-2. ![[Instale a imagem do postgress]](https://hub.docker.com/_/postgres)
+1. [[Instale o docker em sua máquina]](https://docs.docker.com/engine/install/)
+2. [[Instale a imagem do postgress]](https://hub.docker.com/_/postgres)
 	- `docker pull postgres`
 3. Crie um container a partir da imagem
 	- `docker run -e POSTGRES\_PASSWORD=1234 -d --name=database -p 5432:5432 postgres`
